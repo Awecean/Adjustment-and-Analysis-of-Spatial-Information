@@ -32,7 +32,7 @@ hold on
 xlabel('Age (A)');
 ylabel('Disease Rate (D)');
 plot(A_fit, model_poly(C1,A_fit),'linewidth',2,'DisplayName','M_1');
-title('$M_1$','Interpreter','latex');
+title('$M_1$','Interpreter','latex');xlim([15,85]); ylim([0,1])
 exportgraphics(gca,'Fig2.pdf','ContentType','vector');
 
 %% Part 2-2 slowing model
@@ -54,7 +54,7 @@ hold on
 xlabel('Age (A)');
 ylabel('Disease Rate (D)');
 plot(A_fit, D_fit,'b--','linewidth',2,'DisplayName','M_2')
-title('$M_2$','Interpreter','latex');
+title('$M_2$','Interpreter','latex');xlim([15,85]); ylim([0,1])
 exportgraphics(gca,'Fig3.pdf','ContentType','vector');
 
 %% Part 3 determine the goodness of fit
