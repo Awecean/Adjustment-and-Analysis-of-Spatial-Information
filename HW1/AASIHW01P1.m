@@ -36,14 +36,14 @@ function [x,y,z,mean_vals,std_vals] = randn3d(Mx,My,Mz, sx,sy,sz,N)
     legend('Location','northwest')
     exportgraphics(gca,['P1point',sprintf('%d',N),'.pdf'])
 end
-%% Part 3 Main procedure - Interface
+%% Part 2 Main procedure - Interface
 MEANset = zeros(5,3);STDset = zeros(5,3);
 Nset = [30,3000,30000,300000,3000000];
 for i = 1:5
     
     [~,~,~,MEANset(i,:),STDset(i,:)] =  randn3d(200,100,500,0.2,0.3,0.1,Nset(i));
 end
-%%
+%% Part 3 Plot sample data
 figure('Position',[100,100,600,400])
 set(gcf,'Color','White')
 scatter(log10(Nset), MEANset(:,1), 'r^','filled');
